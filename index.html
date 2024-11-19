@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Scoria</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style/style.css" />
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    </head>
+    <body onload="initRotation()">
+        <nav>
+            <div class="nav__container flex-between text-left limit-width">
+                <div>
+                    <h2 class="title title-xxl">Financial Stability Report</h2>
+                    <div class="nav__details flex-col">
+                        <p class="nav__name title-sm extra-bold">Company: <span class="title-sm">XYZ Ltd.</span></p>
+                        <p class="nav__name title-sm extra-bold">Registered address: <span class="title-sm">H51FG, LONDON, Oxford street 1</span></p>
+                        <p class="nav__name title-sm extra-bold">Tax number: <span class="title-sm">2323232323</span></p>
+                        <p class="nav__name title-sm extra-bold">
+                            Company number:
+                            <span class="title-sm"> 3232323232</span>
+                        </p>
+                        <h3 class="nav__ref title-sm">Reference number: 2938-21092024</h3>
+                        <h3 class="title-sm">Issue date and time: 21/09/2024 15:50</h3>
+                    </div>
+                </div>
+                <img src="images/logo.png" alt="scoria logo" />
+            </div>
+        </nav>
+        <section>
+            <div class="summary">
+                <div class="summary__details limit-width">
+                    <div>
+                        <div class="summary__box">
+                            <h2 class="title-xl bold">Summary information</h2>
+                            <p class="text-xs summary__details-text under-text">
+                                The scores reflect your ability to meet the specified monthly payment.
+                            </p>
+                            <div class="line commitment-line">
+                                <p>Monthly payment commitment (<span>EUR</span>):</p>
+                                <p>10.000</p>
+                            </div>
+                            <div class="line">
+                                <p>Average monthly income:</p>
+                                <div class="stars">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <p>Stability of monthly income:</p>
+                                <div class="stars">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <p>Average monthly savings:</p>
+                                <div class="stars">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <p>Account turnover:</p>
+                                <div class="stars">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        class="star filled"
+                                        stroke="currentColor"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-star"
+                                    >
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary__score">
+                        <div class="image-container">
+                            <img src="images/herov2.webp" alt=" analyze" />
+                            <div class="pointer__wrapper">
+                                <!-- <div class="score-pointer-test">
+                                    <span></span>
+                                </div> -->
+                                <svg
+                                    class="score-pointer"
+                                    version="1.0"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="60"
+                                    height="400"
+                                    viewBox="0 0 123 329"
+                                    preserveAspectRatio="xMidYMid meet"
+                                >
+                                    <g transform="translate(0,329) scale(0.1,-0.1)">
+                                        <path
+                                            d="M616 3158 c-3 -24 -8 -86 -11 -138 -7 -104 -10 -147 -30 -405 -3 -27
+                           -11 -147 -20 -265 -27 -385 -36 -504 -40 -535 -2 -16 -7 -66 -10 -110 -3 -44
+                           -7 -107 -10 -140 -3 -33 -7 -100 -11 -150 -10 -163 -22 -306 -26 -309 -1 -2
+                           -33 -17 -69 -34 -179 -86 -299 -279 -299 -477 1 -226 129 -406 360 -504 71
+                           -30 274 -29 345 2 91 40 130 65 184 117 161 157 209 375 130 586 -41 110 -164
+                           235 -277 284 l-50 21 -7 107 c-3 59 -8 125 -10 147 -2 22 -7 99 -10 170 -3 72
+                           -11 186 -16 255 -6 69 -12 175 -14 235 -3 61 -7 135 -10 165 -10 105 -14 176
+                           -20 300 -6 126 -11 221 -20 340 -2 36 -7 99 -10 140 -14 216 -17 240 -30 240
+                           -9 0 -16 -16 -19 -42z m100 -2304 c63 -26 121 -81 150 -141 59 -125 17 -268
+                           -102 -348 -57 -39 -61 -40 -144 -40 -74 0 -91 3 -130 27 -88 52 -137 127 -146
+                           225 -5 48 -2 70 15 107 39 90 93 145 168 172 52 18 143 17 189 -2z"
+                                        />
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="summary__score-info">
+                            <h3 class="title-xl"><span class="bold" id="score">10</span> / 100</h3>
+                            <h4 class="score-helper-text">The higher the score, the lower the risk.</h4>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="score-box-text title-md bold limit-width">
+                    The account holder’s ability to meet the monthly payment is assessed as <span class="title-md bold" id="score-text"></span>.
+                </h1>
+            </div>
+            <div class="account limit-width">
+                <div class="account-info">
+                    <h2 class="account__title title-xl bold">Background information</h2>
+                    <p class="under-text text-xs">
+                        The analysis was conducted based on data from 21/06/2024 to 21/09/2024 using the bank account data of the following
+                        account(s):
+                    </p>
+                    <div class="">
+                        <div class="account__line">
+                            <p>Account holder:</p>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="account__line">
+                            <p>Account number:</p>
+                            <p>LT42**********4536</p>
+                        </div>
+                        <div class="account__line">
+                            <p>Bank:</p>
+                            <p>Revolut</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="account__line">
+                            <p>Account holder:</p>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="account__line">
+                            <p>Account number:</p>
+                            <p>LT42**********1234</p>
+                        </div>
+                        <div class="account__line">
+                            <p>Bank:</p>
+                            <p>OTP</p>
+                        </div>
+                    </div>
+                    <p>The analysis was conducted based on data from 21.06.2024. to 21.09.2024.</p>
+                </div>
+            </div>
+            <div class="share limit-width">
+                <div class="share-box">
+                    <h2 class="title-xl bold">Share my report with</h2>
+                    <p class="text-xs mt-05">
+                        Press the button to share the Report with the requesting company, landlord, or anyone you wish. You can enter multiple email
+                        addresses.
+                    </p>
+                    <!-- <h3 class="share__email">bob.landlord@mail.com</h3> -->
+                    <button class="svg-holder" id="open-dialog">
+                        <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
+                            <path
+                                d="M 40 0 C 34.535156 0 30.078125 4.398438 30 9.84375 C 30 9.894531 30 9.949219 30 10 C 30 13.6875 31.996094 16.890625 34.96875 18.625 C 36.445313 19.488281 38.167969 20 40 20 C 45.515625 20 50 15.515625 50 10 C 50 4.484375 45.515625 0 40 0 Z M 28.0625 10.84375 L 17.84375 15.96875 C 20.222656 18.03125 21.785156 21 21.96875 24.34375 L 32.3125 19.15625 C 29.898438 17.128906 28.300781 14.175781 28.0625 10.84375 Z M 10 15 C 4.484375 15 0 19.484375 0 25 C 0 30.515625 4.484375 35 10 35 C 12.050781 35 13.941406 34.375 15.53125 33.3125 C 18.214844 31.519531 20 28.472656 20 25 C 20 21.410156 18.089844 18.265625 15.25 16.5 C 13.71875 15.546875 11.929688 15 10 15 Z M 21.96875 25.65625 C 21.785156 28.996094 20.25 31.996094 17.875 34.0625 L 28.0625 39.15625 C 28.300781 35.824219 29.871094 32.875 32.28125 30.84375 Z M 40 30 C 37.9375 30 36.03125 30.644531 34.4375 31.71875 C 31.769531 33.515625 30 36.542969 30 40 C 30 40.015625 30 40.015625 30 40.03125 C 29.957031 40.035156 29.917969 40.058594 29.875 40.0625 L 30 40.125 C 30.066406 45.582031 34.527344 50 40 50 C 45.515625 50 50 45.515625 50 40 C 50 34.484375 45.515625 30 40 30 Z"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <dialog data-modal id="user-dialog">
+                <div class="flex-between">
+                    <h3 class="title-xl">Share my report with</h3>
+                    <button type="button" id="close-dialog" class="btn btn--close">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="40"
+                            height="40"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-x"
+                        >
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="text-xs">Enter the email address(es) of those with whom you would like to share the Report.</p>
+                <p class="text-xs mt-05 mb-1">We will also send a copy of all emails to the following address:</p>
+                <form action="" class="form">
+                    <div id="input-fields" class="dynamic-fields">
+                        <input autofocus id="second-email" type="email" placeholder="Share with this email" value="" />
+                    </div>
+                    <button class="btn add-input-button" type="button" id="add-input">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-plus"
+                        >
+                            <path d="M5 12h14" />
+                            <path d="M12 5v14" />
+                        </svg>
+                    </button>
+                    <button class="btn send-btn" type="submit">Send</button>
+                </form>
+            </dialog>
+        </section>
+        <footer class="limit-width">
+            <p>SCORIA is a product of CYGNUS AISP UAB, an Account Information Service Provider operating with the status of a Payment Institution.</p>
+            <div class="flex mt-05">
+                <button class="btn btn--primary" onclick="updateScore(5)">Very poor</button>
+                <button class="btn btn--primary" onclick="updateScore(25)">Poor</button>
+                <button class="btn btn--primary" onclick="updateScore(55)">Fair</button>
+                <button class="btn btn--primary" onclick="updateScore(75)">Good</button>
+                <button class="btn btn--primary" onclick="updateScore(100)">Excellent</button>
+            </div>
+        </footer>
+    </body>
+    <script>
+        //MODAL
+        const openButton = document.getElementById('open-dialog');
+        const closeButton = document.getElementById('close-dialog');
+        const dialog = document.getElementById('user-dialog');
+        openButton.addEventListener('click', () => {
+            dialog.showModal();
+        });
+        closeButton.addEventListener('click', () => {
+            dialog.close();
+        });
+
+        const maxInputs = 4;
+        let inputCount = 0;
+        const addButton = document.getElementById('add-input');
+
+        document.getElementById('second-email').addEventListener('input', function () {
+            const emailInput = document.getElementById('second-email');
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            /*  if (emailPattern.test(emailInput.value)) {
+                addButton.style.display = 'block';
+            } else {
+                addButton.style.display = 'none';
+            } */
+        });
+
+        document.getElementById('add-input').addEventListener('click', function () {
+            if (inputCount < maxInputs) {
+                inputCount++;
+                const inputContainer = document.createElement('div');
+                inputContainer.className = 'input-container';
+                inputContainer.innerHTML = `
+                <div class="flex">
+                    <input type="text" name="input${inputCount}" placeholder="Share with this email">
+                    <button type="button" class="btn remove-input"> <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-x"
+                >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+                </svg></button>
+                </div>
+        `;
+                document.getElementById('input-fields').appendChild(inputContainer);
+
+                //remove button
+                inputContainer.querySelector('.remove-input').addEventListener('click', function () {
+                    inputContainer.remove();
+                    inputCount--;
+                    addButton.style.display = inputCount === maxInputs ? 'none' : 'block';
+                });
+                addButton.style.display = inputCount === maxInputs ? 'none' : 'block';
+            } else {
+                alert('Maximum 5 input fields can be added.');
+            }
+        });
+
+        // METER
+        function initRotation() {
+            updateScore(92);
+        }
+        function updateScore(score) {
+            console.log('score', score);
+            const scoreTextBox = document.querySelector('.score-box-text');
+            scoreTextBox.classList.remove('orange', 'yellow', 'green', 'darkgreen');
+
+            let scoreText;
+            if (score <= 20) {
+                scoreText = 'Very Poor';
+            } else if (score <= 40) {
+                scoreText = 'Poor';
+                scoreTextBox.classList.add('orange');
+            } else if (score <= 60) {
+                scoreText = 'Fair';
+                scoreTextBox.classList.add('yellow');
+            } else if (score <= 80) {
+                scoreText = 'Good';
+                scoreTextBox.classList.add('green');
+            } else {
+                scoreTextBox.classList.add('darkgreen');
+                scoreText = 'Excellent';
+            }
+            document.getElementById('score').innerText = score;
+            document.getElementById('score-text').innerText = scoreText;
+            rotateSVG(score);
+        }
+        function rotateSVG(value) {
+            let rotation = value * 2;
+            if (value > 99) {
+                rotation = 99 * 2;
+            }
+            const svgElement = document.querySelector('.score-pointer');
+            if (svgElement) {
+                svgElement.style.transform = `rotate(${rotation}deg)`;
+            } else {
+                console.error('Element with class .score-pointer not found.');
+            }
+        }
+    </script>
+</html>
