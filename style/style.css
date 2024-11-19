@@ -91,8 +91,16 @@ a {
   margin-top: 0.5em;
 }
 
+.mb-05 {
+  margin-bottom: 0.5em;
+}
+
 .mb-1 {
   margin-bottom: 1em;
+}
+
+.mb-2 {
+  margin-bottom: 2em;
 }
 
 .text--left {
@@ -210,25 +218,19 @@ nav .nav__container {
   gap: 1em;
 }
 nav .nav__container .nav__details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2em 0.5em;
 }
 nav img {
   height: 100px;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   nav .nav__container {
     flex-direction: row;
     padding-top: 2em;
   }
 }
-@media (min-width: 1000px) {
-  nav .nav__container {
-    padding-inline: 1em;
-  }
-}
-
 @keyframes rotate {
   from {
     rotate: -90deg;
@@ -324,6 +326,7 @@ section > div {
 .summary .summary__box .line {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 0.8em;
 }
 .summary .summary__box .line p {
@@ -386,7 +389,7 @@ section > div {
   padding: 2em 1em;
 }
 .account-info .account__title {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
 }
 .account-info .account__text {
   margin-bottom: 1.2em;
@@ -415,6 +418,29 @@ section > div {
   .account-info .account__line > :first-child {
     text-decoration: underline;
   }
+}
+
+.account-grid {
+  display: grid;
+  width: min(100%, 400px);
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.5em;
+}
+.account-grid .badge {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  background: red;
+  padding: 0.5em 2em;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  color: white;
+}
+.account-grid .pass {
+  background-color: #b9d24c;
 }
 
 .share {

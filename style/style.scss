@@ -100,11 +100,14 @@ a {
 @mixin textMini() {
     font-size: clamp(0.7rem, 3vw + 0.1rem, 0.85rem);
 }
+@mixin titleXL() {
+    font-size: clamp(1.3rem, 4vw + 0.1rem, 1.5rem);
+}
 .title-xxl {
     font-size: clamp(1.4rem, 4vw + 0.1rem, 1.8rem);
 }
 .title-xl {
-    font-size: clamp(1.3rem, 4vw + 0.1rem, 1.5rem);
+    @include titleXL();
 }
 .title-md {
     font-size: clamp(1.1rem, 3.5vw + 0.1rem, 1.4rem);
@@ -125,10 +128,15 @@ a {
 .mt-05 {
     margin-top: 0.5em;
 }
+.mb-05 {
+    margin-bottom: 0.5em;
+}
 .mb-1 {
     margin-bottom: 1em;
 }
-
+.mb-2 {
+    margin-bottom: 2em;
+}
 .text--left {
     text-align: left;
 }
@@ -248,24 +256,24 @@ nav {
         flex-direction: column-reverse;
         gap: 1em;
         .nav__details {
-            display: flex;
-            flex-direction: column;
-            gap: 0.2em;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.2em 0.5em;
         }
     }
     img {
         height: 100px;
     }
-    @media (min-width: $mobileBreak) {
+    @media (min-width: 600px) {
         .nav__container {
             flex-direction: row;
             padding-top: $lineSpace;
         }
     }
     @media (min-width: $maxWidth) {
-        .nav__container {
-            padding-inline: $boxPadding;
-        }
+        // .nav__container {
+        //     // padding-inline: $boxPadding;
+        // }
     }
 }
 @keyframes rotate {
@@ -377,6 +385,7 @@ section {
         .line {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-top: 0.8em;
             p {
                 letter-spacing: 0.5px;
@@ -439,12 +448,13 @@ section {
 .account {
     border-top: 2px solid $boxColor;
 }
+
 .account-info {
     margin-block: $lineSpace;
     background: $boxColor;
     padding: $boxPadding * 2 $boxPadding;
     .account__title {
-        margin-bottom: 0.2em;
+        margin-bottom: 0.5em;
     }
     .account__text {
         margin-bottom: 1.2em;
@@ -460,7 +470,7 @@ section {
         &:last-of-type {
             margin-bottom: 1.5em;
         }
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: $mobileBreak) {
             grid-template-columns: 1fr;
             gap: 0.2em;
             margin-bottom: 1em;
@@ -475,12 +485,36 @@ section {
     }
 }
 
+.account-grid {
+    display: grid;
+    width: min(100%, 400px);
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.5em;
+    .badge {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        background: red;
+        padding: 0.5em 2em;
+        border-radius: $borderRadius;
+        text-transform: uppercase;
+        font-weight: 600;
+        width: 100%;
+
+        color: white;
+    }
+    .pass {
+        background-color: #b9d24c;
+    }
+}
+
 .share {
     border-top: 2px solid $boxColor;
 }
 .share-box {
     background: $boxColor;
-    width: min(100%, 500px);
+    width: min(100%, $mobileBreak);
     padding: $boxPadding;
     margin-inline: auto;
     margin-block: 1em;
@@ -534,7 +568,7 @@ dialog {
     }
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: $borderRadiusSoft;
-    width: min(100%, 500px);
+    width: min(100%, $mobileBreak);
     background: $boxColor;
     .form {
         width: fit-content;
