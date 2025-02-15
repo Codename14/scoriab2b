@@ -545,16 +545,20 @@ $table-color: rgba(174, 174, 174, 0.452);
         transition-duration: 0.4s;
         transition-property: all;
         transition-timing-function: line;
-        &:nth-child(even) {
-            background-color: rgba(174, 174, 174, 0.322);
+        &:nth-child(even):not(.table-title):not(.table-sm-title) {
+            background-color: rgba(174, 174, 174, 0.25);
         }
-        &:hover:not(.table-title) {
+        &:hover:not(.table-title):not(.table-sm-title) {
             background-color: rgba(0, 0, 0, 0.56);
             color: rgb(225, 225, 225);
             box-shadow: $table-color -1px 1px, $table-color -2px 2px, $table-color -3px 3px, $table-color -4px 4px, $table-color -5px 5px,
                 $table-color -6px 6px;
             transform: translate3d(3px, 0px, 0);
         }
+    }
+    .table-sm-title {
+        background: gray;
+        color: white;
     }
     .table-title,
     .table-title td {
