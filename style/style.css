@@ -55,7 +55,9 @@ h5,
 h6,
 p,
 span,
-a {
+a,
+td,
+tr {
   font-size: clamp(0.8rem, 2.75vw + 0.1rem, 1.1rem);
 }
 
@@ -441,6 +443,52 @@ section > div {
 }
 .account-grid .pass {
   background-color: #b9d24c;
+}
+
+.data-section {
+  margin-block: 2em;
+  background: #f7f7f7;
+  padding: 2em 1em;
+}
+@media screen and (max-width: 500px) {
+  .data-section {
+    padding: 2em 0;
+  }
+  .data-section .p-balance-text {
+    padding-inline: 0.25em;
+  }
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1em;
+  text-align: left;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-spacing: 0;
+}
+.table th,
+.table td {
+  padding: 0.5em;
+}
+.table tr {
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+.table tr:nth-child(even) {
+  background-color: rgba(174, 174, 174, 0.322);
+}
+.table tr:hover:not(.table-title) {
+  background-color: rgba(0, 0, 0, 0.56);
+  color: rgb(225, 225, 225);
+  box-shadow: rgba(174, 174, 174, 0.452) -1px 1px, rgba(174, 174, 174, 0.452) -2px 2px, rgba(174, 174, 174, 0.452) -3px 3px, rgba(174, 174, 174, 0.452) -4px 4px, rgba(174, 174, 174, 0.452) -5px 5px, rgba(174, 174, 174, 0.452) -6px 6px;
+  transform: translate3d(3px, 0px, 0);
+}
+.table .table-title,
+.table .table-title td {
+  background: black;
+  color: white;
 }
 
 .share {

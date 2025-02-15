@@ -84,7 +84,9 @@ h5,
 h6,
 p,
 span,
-a {
+a,
+td,
+tr {
     font-size: clamp(0.8rem, 2.75vw + 0.1rem, 1.1rem);
 }
 
@@ -508,6 +510,58 @@ section {
         background-color: #b9d24c;
     }
 }
+.data-section {
+    margin-block: $lineSpace;
+    background: $boxColor;
+    padding: $boxPadding * 2 $boxPadding;
+    @media screen and (max-width: $mobileBreak) {
+        padding: $boxPadding * 2 0;
+        .p-balance-text {
+            padding-inline: $boxPadding / 4;
+        }
+    }
+}
+$table-color: rgba(174, 174, 174, 0.452);
+.table {
+    width: 100%;
+    // padding: 0.4em;
+    // border-radius: $borderRadiusSoft;
+    margin-bottom: 1em;
+    text-align: left;
+    // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    // box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    // box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-spacing: 0; // ensures no spacing
+    // border-collapse: collapse; // removes default gaps between cells
+
+    th,
+    td {
+        padding: 0.5em;
+    }
+    tr {
+        transition-delay: 0s;
+        transition-duration: 0.4s;
+        transition-property: all;
+        transition-timing-function: line;
+        &:nth-child(even) {
+            background-color: rgba(174, 174, 174, 0.322);
+        }
+        &:hover:not(.table-title) {
+            background-color: rgba(0, 0, 0, 0.56);
+            color: rgb(225, 225, 225);
+            box-shadow: $table-color -1px 1px, $table-color -2px 2px, $table-color -3px 3px, $table-color -4px 4px, $table-color -5px 5px,
+                $table-color -6px 6px;
+            transform: translate3d(3px, 0px, 0);
+        }
+    }
+    .table-title,
+    .table-title td {
+        background: black;
+        color: white;
+    }
+}
 
 .share {
     border-top: 2px solid $boxColor;
@@ -548,6 +602,7 @@ section {
         fill: white;
     }
 }
+
 dialog {
     display: none;
     opacity: 0;
